@@ -1,0 +1,123 @@
+%! Author = taj
+%! Date = 7/22/25
+
+% Preamble
+\documentclass[11pt]{article}
+
+% Packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+
+\title{1. Merjenje hitrosti tekočin z Venturjevo cevjo}
+\author{Taj Šobot}
+
+% Document
+\begin{document}
+    \maketitle
+    V tem eksperimentu smo s pomočjo Venturjeve cevi merili hitrost, masni pretok in tlačno razliko v ožjem in širšem delu cevi.
+
+
+    \section{Meritve}
+    Izmerjeni zunanji premer ($err_d/D = 0.01cm$):
+    \[
+        D_1 = 3.13 cm; D_2 = 2.98 cm; D_3 = 3.16 cm; D_4 = 2.95 cm.
+    \]
+    Izmerjeni notranji premeri
+    \[
+        d_1 = 2.69 cm; d_2 = 2.73 cm; d_3 = 2.77 cm; d_4 = 2.83 cm.
+    \]
+    Višinska razlika teločine v u cevki (pri dveh različnih nastavitvah hitrosti):
+    $err_h = 0.1cm$
+    \begin{table}[h!]
+        \centering
+        \begin{tabular}{|c|c|}
+            \hline
+            \textbf{$\Delta h_{a} [cm]$} & \textbf{$\Delta h_b$ [cm]} \\
+            \hline
+            3.0  & 4.9 \\
+            3.1  & 4.8 \\
+            3.1  & 4.8 \\
+            3.1  & 4.8 \\
+            3.1  & 4.8 \\
+            3.1  & 4.7 \\
+            \hline
+        \end{tabular}
+        \caption{tabela meritev u cevke}
+        \label{tab:dh_data}
+    \end{table}
+
+    Skica eksperimenta:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{img}
+        \caption{Venturjeva cev z oznakami}
+        \label{fig:2}
+    \end{figure}
+
+    \section{rezultati in grafi}
+    Iz premerov lahko določimo povprečni premer:
+    \begin{align*}
+        D &= (3.1 \pm 0.1)\,\text{cm} \\
+        d &= (2.8 \pm 0.1)\,\text{cm}
+    \end{align*}
+    Iz tabele določimo razliko višine v u cevki:
+    \begin{align*}
+        h_a &= (3.1 \pm 0.1)\,\text{cm} \\
+        h_b &= (4.8 \pm 0.1)\,\text{cm}
+    \end{align*}
+
+    \subsection{hitrost}
+    In ploščine $S$ preko enačbe $S_1 =\frac{1}{4} \pi D^2 $ in $S_2 =\frac{1}{4} \pi d^2 $ in dobimo:
+    \begin{align*}
+        S_1 = (7.5 \pm 0.3) cm^2 \\
+        S_2 = (6.2 \pm 0.3) cm^2
+    \end{align*}
+
+    nato vstavimo v enačbo($\rho_v = 1.00 \frac{g}{cm^3}$, $\rho_z = 1.23*10^{-3} \frac{g}{cm^3}$ in $g = 981 \frac{cm}{s^2}$):
+    \[
+        v_{1a} = \sqrt{\frac{2 \rho_v g h_a }{\rho_z[(\frac{S_1}{S_2})^2 -1]}} = (33 \pm 4) \frac{m}{s}
+    \]
+    Hitrost v zoženem delu pa dobimo preko enačbe $v_2 = v_1 \frac{S_1}{S_2}$:
+    \[
+        v_{2a} = (40 \pm 4) \frac{m}{s}
+    \]
+
+    In še za b) primer:
+    \[
+        v_{1b} = \sqrt{\frac{2 \rho_v g h_b }{\rho_z[(\frac{S_1}{S_2})^2 -1]}} = (41 \pm 4) \frac{m}{s}
+    \]
+    Ter hitrost v zoženem delu:
+    \[
+        v_{2b} = (50 \pm 5) \frac{m}{s}
+    \]
+    \subsection{tlačna razlika}
+    Tlačna razlika se izračuna z enačbo:
+    \[
+        \Delta p = \rho_v g h
+    \]
+    Toerj:
+    \begin{align*}
+        \Delta p_a = (300 \pm 20) Pa \\
+        \Delta p_b = ( 470 \pm 30) Pa
+    \end{align*}
+
+    \subsection{masni pretok}
+    Masni pretok se izračuna s sledečo enačbo(za oba dela cevi more bit isto):
+    \[
+        \Phi_{1} = \Phi_{2} = S_1 v_1 = S_2 v_2
+    \]
+    Torej a):
+    \begin{align*}
+        \Phi_{1a} = (25 \pm 2 ) \frac{g}{s} \\
+        \Phi_{2a} = (25 \pm 2) \frac{g}{s}
+    \end{align*}
+
+    In b)
+    \begin{align*}
+        \Phi_{1b} = (30 \pm 2 )\frac{g}{s}  \\
+        \Phi_{2b} = (31 \pm 2) \frac{g}{s}
+    \end{align*}
+
+    Rezultata se ujemata.
+\end{document}

@@ -1,0 +1,80 @@
+%! Author = taj
+%! Date = 7/22/25
+
+% Preamble
+\documentclass[11pt]{article}
+
+% Packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+
+\title{6. Merjenje specifične toplote vode}
+\author{Taj Šobot}
+
+% Document
+\begin{document}
+    \maketitle
+    \flushleft
+    Pri tem eksperimentu smo določali specifične in toplotne kapacitete vode in predmetov.
+
+
+    \section{Meritve in rezultati}
+    V kalorimeter smo nalili vodo z začetno temperaturo $60 ^\circ$.
+    Potem pa smo počakali, da se temperatura vode in kalorimetra v ravnovesju.
+
+    Sobna temperatura oziroma začetna temperatura kalorimetra:
+    \[
+        T_s = T_k^{(z)} = (296 \pm 1) K
+    \]
+
+    Začetna temperatura vode:
+    \[
+        T_v^{(z)} = (333 \pm 1) K
+    \]
+
+    Ko smo vodo dodali v kalorimeter in počakali, da se temperatura izenači (28 min 20 s), je sistem bil na končni temperaturi
+    \[
+        T^{(k)} = (331 \pm 1) K
+    \]
+
+    Potem smo sistem kalorimeter + voda začeli segrevat.
+    Grelec je deloval z tokom $I = (3.0 \pm 0.2) A$ in na napetosti $U = (20.1 \pm 0.1) V$.
+    Grelec je deloval za $t = (1519 \pm 1)s $.
+    Po segrevanjem končno temperaturo.
+    \[
+        T^{(kk)} = (346 \pm 1 )K
+    \]
+    Masa vode je bila izmerjena:
+    \[
+        m_v = (1,152 \pm 0,002)kg
+    \]
+    Te podatke lahko vstavimo v enačbo (8) iz skripte:
+    \[
+        c = \frac{I U t}{m_v \Delta T(t)\left(1+ \frac{T_v^{(z)} - T^{(k)}  }{ T^{(k)}  - T_k^{(z)}}\right)} = (5100 \pm 400) \frac{J}{kg K}
+    \]
+    To pa lahko vstavimo v enačbo (7):
+    \[
+        C_k = m_v c \frac{ T_v^{(z)} - T^{(k)}}{T^{(k)} - T_k^{(z)}} = (250 \pm 90) J/K
+    \]
+
+    \section{Vprašanja in odgovori}
+    \textit{1. Zakaj lahko v enačbah (2) in (3) vstavimo delta T v kelvinih ali stopinjah celzija?}
+    \\
+    Razlika med kelvini in stopinjami je samo premaknjena skala.
+    Razlike ($\Delta T$) so zato neodvisne od enote.
+    \\
+    \textit{2. Specifična toplota snovi A je večja od specifične toplote snovi B. Obe snovi imata enako
+    začetno temperaturo, nato pa jima dovedemo enako količino toplote. Predpostavimo, da nobena
+    od snovi ne spremeni agregatnega stanja.}
+    \\
+    V primeru $T_A < T_B$.
+    "A" ima večjo specifično toploto, to pomeni da se bo za enoto dovedene energije pridobila manj temperature.
+    \\
+    \textit{3. Specifična toplota ledu je približno enaka polovici specifične toplote vode. Enaki masi ledu
+    in vode dovedemo enako količino toplote. Začetna temperatura ledu je dovolj nizka, da se led
+    med poskusom ne tali. Določite razmerje med spremembama temperature vode in ledu.}
+    \\
+    Temperatura ledu bo narastla 2x hitreje.
+
+\end{document}

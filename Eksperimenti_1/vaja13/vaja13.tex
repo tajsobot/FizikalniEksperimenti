@@ -1,0 +1,117 @@
+%! Author = taj
+%! Date = 7/22/25
+
+% Preamble
+\documentclass[11pt]{article}
+
+% Packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{upgreek}
+
+\title{13. Trki}
+\author{Taj Šobot}
+
+% Document
+\begin{document}
+    \maketitle
+    \flushleft
+
+    Pri tej vaji smo preverjali veljavnost zakona o ohranitvi gibalne količine.
+
+    \section{Meritve}
+
+    Mase vozičkov:
+    \begin{align*}
+        m_1 = (0.517 \pm 0.001) kg \\
+        m_2 = (0.635 \pm 0.001) kg
+    \end{align*}
+
+    V spodnjih tabelah so prikazane meritve hitrosi ob različnih fazah poskusa.
+    Prožni trk:
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|c|c|}
+            \hline
+            $v_1 [m/s]$ & $v_2 [m/s]$ \\
+            \hline
+            0.60  & 0.46 \\
+            0.94  & 0.74 \\
+            1.46  & 1.17 \\
+            0.79  & 0.61 \\
+            1.90  & 1.54 \\
+            \hline
+        \end{tabular}
+        \caption{tabela prozni trk}
+        \label{tab:1}
+    \end{table}
+    Neprožni trk:
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|c|c|}
+            \hline
+            $v_1 [m/s]$ & $v_{12} [m/s]$ \\
+            \hline
+            1.09  & 0.45 \\
+            2.08  & 0.93 \\
+            0.68  & 0.25 \\
+            1.16  & 0.51 \\
+            1.60  & 0.71 \\
+            \hline
+        \end{tabular}
+        \caption{tabela neprozni trk}
+        \label{tab:2}
+    \end{table}
+
+    \section{Rezultati}
+    Prožni trk:
+    Preverimo da velja enačba
+    \[
+        m_1 v_1 = m_2 v_2
+    \]
+    Vstavimo za 5 trkov:
+    \begin{align*}
+        trk 1: (0.31 \pm 0.01) kg m/s = (0.29 \pm 0.01) kg m/s \\
+        trk 2: (0.48 \pm 0.01) kg m/s = (0.47 \pm 0.01) kg m/s \\
+        trk 3: (0.75 \pm 0.01) kg m/s = (0.74 \pm 0.01) kg m/s \\
+        trk 4: (0.41 \pm 0.01) kg m/s = (0.38 \pm 0.01) kg m/s \\
+        trk 5: (0.98 \pm 0.01) kg m/s = (0.96 \pm 0.01) kg m/s \\
+    \end{align*}
+    Energija, ki se je zgubila ob vsakem trku (v obliki toplote):
+    \[
+        \Delta W_k = \frac{1}{2}(m_2 v_2^2 - m_1 v_1^2)
+    \]
+    Vstavimo:
+    \begin{align*}
+        \Delta W_{k1} = -0.02 J \\
+        \Delta W_{k2} = -0.05 J \\
+        \Delta W_{k3} = -0.12 J \\
+        \Delta W_{k4} = -0.05 J \\
+        \Delta W_{k5} = -0.18 J \\
+    \end{align*}
+    Rezultati se strinjajo z teorijo.
+    \\
+    Isto ponovimo za neprožni trk:
+    Enačba, ki more veljat:
+    \[
+        m_1 v_1 = (m_1 + m_2) v*2
+    \]
+    \begin{align*}
+        trk 1: (0.51 \pm 0.01) kg m/s = (0.48 \pm 0.01) kg m/s \\
+        trk 2: (1.07 \pm 0.01) kg m/s = (1.04 \pm 0.01) kg m/s \\
+        trk 3: (0.33 \pm 0.01) kg m/s = (0.28 \pm 0.01) kg m/s \\
+        trk 4: (0.60 \pm 0.01) kg m/s = (0.58 \pm 0.01) kg m/s \\
+        trk 5: (0.82 \pm 0.01) kg m/s = (0.82 \pm 0.01) kg m/s \\
+    \end{align*}
+    Ter izgube energij:
+    \begin{align*}
+        \Delta W_{k1} = -0.19 J \\
+        \Delta W_{k2} = -0.42 J \\
+        \Delta W_{k3} = -0.17 J \\
+        \Delta W_{k4} = -0.20 J \\
+        \Delta W_{k5} = -0.21 J \\
+    \end{align*}
+
+    Opazimo, da se G ohranja (razen za to koliko izgube poberejo).
+\end{document}

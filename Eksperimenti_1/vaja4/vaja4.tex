@@ -1,0 +1,275 @@
+%! Author = taj
+%! Date = 7/22/25
+
+% Preamble
+\documentclass[11pt]{article}
+
+% Packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+
+\title{4. Linearni in kvadratni zakon upora}
+\author{Taj Šobot}
+
+% Document
+\begin{document}
+    \maketitle
+    \flushleft
+
+    V tem eksperimentu smo preučevali givanje predmetov skozi tekočine in gibanje tekočine mimo predmetov.
+    Kako vpliva viskoznost, oblika in hitrost tekočine na silo ki deluje na telo.
+
+    \section{Meritve}
+
+    \subsection{1. Linearni zakon upora}
+
+    Kroglico smo spuščali skozi viskozno olje.
+    Kroglica se je kmalu začela gibati enakomerno.
+
+
+    Takrat velja:
+    \[
+        F_g - F_u - F_{vzg} = 0
+    \]
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.9\textwidth]{img}
+        \caption{Skica sistema kroglice}
+        \label{fig:1}
+    \end{figure}
+
+    Te sile so:
+    \begin{align*}
+        F_g = m*g \\
+        F_u = 6 \pi \eta r v \\
+        F_{vzg} = 4/3 \pi r_k^3 \rho_0 g \\
+    \end{align*}
+    Po vstavljanju in obračanju dobimo to zvezo:
+    \[
+        \eta = \frac{2r_k^2 g(\rho_k - \rho_0)}{9v_k}
+    \]
+    Končno hitrost pa dobimo iz meritev z enačbo $L = (0.62 \pm 0.01) m$:
+    \[
+        v_k = \frac{L}{t}
+    \]
+
+
+
+    Meritve so prikazane v spodnji tabeli (večja in mala kroglica):
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|c|c|c|}
+            \hline
+            n & t [s] (večja) & t [s] (manjša)\\
+            \hline
+            1 & 0.70 & 0.83 \\
+            2 & 0.68 & 0.83 \\
+            3 & 0.68 & 0.83 \\
+            4 & 0.70 & 0.86 \\
+            5 & 0.70 & 0.83 \\
+            6 & 0.70 & 0.84 \\
+            \hline
+        \end{tabular}
+        \caption{tabela 1}
+        \label{tab:1}
+    \end{table}
+    \[
+        t_{err} = \pm 0.1 s
+    \]
+    Velikosti kroglic:
+    \begin{align*}
+        R_v = (0,600 \pm 0,002)cm \\
+        R_m = (0,35 \pm 0,002)cm
+    \end{align*}
+    Mase kroglic:
+    \begin{align*}
+        m_v = (7,1 \pm 0,1)g \\
+        m_m = (1,4 \pm 0,1)g
+    \end{align*}
+
+    \subsection{2.a Linearni zakon upora}
+    Pri tem delu vaje smo merili hitrost zraka z pitotovo cevjo.
+    Zrak smo z vetrovnikom pospeševali.
+    Z u-cevko smo merili zastojni tlak.
+    Pitotovo cev smo tudi premikali pravokotno na premikajoči zrak, tako smo dobili profil hitrosti.
+
+    Meritve:
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|c|c|c|}
+            \hline
+            n & $\Delta x [cm]$ & $\Delta p [Pa]$\\
+            \hline
+            1	& 0.5 & 12  \\
+            2	& 0.9 & 21  \\
+            3	& 1.3 & 31  \\
+            4	& 1.9 & 45  \\
+            5	& 2.4 & 57  \\
+            6	& 2.4 & 57  \\
+            7	& 2.6 & 62  \\
+            8	& 2.6 & 62  \\
+            9	& 2.5 & 59  \\
+            10	& 1.2 & 28  \\
+            11	& 0.6 & 14  \\
+            12	& 0.2 & 5   \\
+            \hline
+        \end{tabular}
+        \caption{tabela tlakov}
+        \label{tab:2}
+    \end{table}
+    Napake:
+    \begin{align*}
+        x_{err} = \pm 0.1 cm \\
+        p_{err} = \pm 2 Pa
+    \end{align*}
+
+    U cevko smo meli nastavljeno pod kotom $\alpha = (14 \pm 1) ^\circ$
+    Tlak (v zgornji tabeli) smo izračunali po tej enačbi:
+    \[
+        \Delta p = \rho g x \sin(\alpha)
+    \]
+
+    \subsection{2.b Merjenje koeficienta upora}
+    Na isti način kot pri prejšnji vaji smo postavili pred vetrovnik različne objekte in merili silo upora na njih.
+    Kasneje pa še izračunati koeficient upora za vsak predmet.
+    To smo dosegli z vzvodom in silomerom.
+    Skica eksperimenta:
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.9\textwidth]{img2}
+        \caption{Skica eksperimenta}
+        \label{fig:2}
+    \end{figure}
+    Tako je zrak ustvarjal navor, ki je:
+    \[
+        F_u r_2 = F_d r_1
+    \]
+    Dolžine so bile izmerjene:
+    \begin{align*}
+        r_2 = (19,9 \pm 0,1) cm \\
+        r_1 = (21,2 \pm 2) cm
+    \end{align*}
+    Naše meritve so meritve sile $F_d$ v nasledni tabeli (3 različni predmeti):
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|c|c|c|c|}
+            \hline
+            n & $F [N]$ (krogla) & $F [N]$ (ploscek) & F [N] (avto)\\
+            \hline
+            1	& 0.02	& 0.071	 & 0.011 \\
+            2	& 0.018	& 0.069	 & 0.012 \\
+            3	& 0.02	& 0.069	 & 0.013 \\
+            4	& 0.018	& 0.065	 & 0.012 \\
+            5	& 0.021	& 0.067	 & 0.014 \\
+
+            \hline
+        \end{tabular}
+        \caption{tabela sil}
+        \label{tab:3}
+    \end{table}
+    Vsaki od predmetov smo morali tudi izmerit prečni presek:
+    \begin{align*}
+        r_{krog} = (2,5 \pm 0,1) cm \\
+        r_{plo} = (2,5 \pm 0,1) cm \\
+        a_{avt} = (4,0 \pm 0,1) cm \\
+        b_{avt} = (3,0 \pm 0,1) cm \\
+    \end{align*}
+
+    \section{Rezultati in grafi}
+
+    \subsection{1. Linearni zakon upora}
+    %todo
+    Končne hitrosti kroglic:
+    \begin{align*}
+        v_{k1} = (0.89 \pm 0.05) m/s \\
+        v_{k2} = (0.74 \ pm 0.05) m/s
+    \end{align*}
+    Gostota kroglic in olja je:
+    \begin{align*}
+        \rho_{k1} = (7800 \pm 10) kg/m^3 \\
+        \rho_{k2} = (7800 \ pm 10) kg/m^3 \\
+        \rho_{olja} = (830 \ pm 10) kg/m^3 \\
+    \end{align*}
+    Vstavimo v enačbo:
+    \[
+        \eta = \frac{2r_k^2 g(\rho_k - \rho_0)}{9v_k}
+    \]
+    Dobimo:
+    \[
+        \eta_1 = (0.61 \pm 0.02) kg/ms \\
+        \eta_2 = (0.58 \pm 0.02) kg/ms
+    \]
+    te vrednosti se strinjajo z realnimi.
+
+    \subsection{2.a Merjenje hitrosti zraka}
+
+    Hitrost zraka lahko izračunamo z enačbo:
+    \[
+        v = \sqrt{\frac{2 \rho g l \sin(\alpha)}{\rho_z}}
+    \]
+
+    Izracuni v tabeli:
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|c|c|c|}
+            \hline
+            n & $v [m/s]$ \\
+            \hline
+            1	& 4.3  \\
+            2	& 5.8  \\
+            3	& 6.9  \\
+            4	& 8.4  \\
+            5	& 9.4  \\
+            6	& 9.4  \\
+            7	& 9.8  \\
+            8	& 9.8  \\
+            9	& 9.6  \\
+            10	& 6.6  \\
+            11	& 4.7  \\
+            12	& 2.7  \\
+            \hline
+        \end{tabular}
+        \caption{tabela hitrosti}
+        \label{tab:4}
+    \end{table}
+    Kot vidimo je v sredini hitrost zraka okoli $v_z = (9.7 \pm 0.2) m/s$.
+
+    \subsection{2.b Merjenje koeficienta upora}
+    Koefecient upora za vsak predmet se izračuna z ($\rho_z = (1,29 \pm 0,02) kg/m^3$):
+    \[
+        C = \frac{2 F_u}{S \rho_z v^2}
+    \]
+    Izračunane povprečne meritve:
+    \begin{align*}
+        F_{krog} = (0.019 \pm 0.002) N \\
+        F_{plo} = (0.034 \pm 0.003) N \\
+        F_{avt} = (0.012 \pm 0.002) N
+    \end{align*}
+
+    Izračunane povprečne sile:
+    \begin{align*}
+        F_{ukrog} = (0.020 \pm 0.002) N \\
+        F_{uplo} = (0.036 \pm 0.003) N \\
+        F_{uavt} = (0.013 \pm 0.002) N
+    \end{align*}
+    Izračunane ploščine:
+    \begin{align*}
+        S_{krog} = (0.02 \pm 0.0003) m^2 \\
+        S_{plo} = (0.003 \pm 0.0001) m^2  \\
+        S_{avt} = (0.0012 \pm 0.0002) m^2
+    \end{align*}
+    Izračunani koeficienti:
+    \begin{align*}
+        C_{krog} = (0.23 \pm 0.05)  \\
+        C_{plo} = (0.43 \pm 0.05)   \\
+        C_{avt} = (0.26 \pm 0.05)
+    \end{align*}
+    Komentar: te vrednosti so malo manjše od realnih.
+
+
+\end{document}
