@@ -1,3 +1,9 @@
+-----------------------
+p - vsi podatki
+x - narejeno porocilo
+xx - zagovorjeno
+-----------------------
+
 Eksperimenti I
 - [xx] 1
 - [xx] 2
@@ -28,7 +34,7 @@ Eksperimenti II
 - [] 12
 - [] ekstra
 Eksperimenti III
-- [p] 1
+- [x] 1
 - [p] 2
 - [xx] 3
 - [p] 4
