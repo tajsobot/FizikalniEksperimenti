@@ -5,10 +5,11 @@ import pandas as pd
 
 plt.style.use('bmh')
 
-filenames = ["meritve/ref.csv", "meritve/Gled.csv"]
+filenames = ["meritve/spekter odboja baseline.csv", "meritve/spekter odboja.csv"]
 
 
 #rdeca je ref
+
 colors = ['#000000', '#d62728', '#2ca02c', '#ff7f0e', '#9467bd', '#8c564b']
 
 fig, ax = plt.subplots(figsize=(10, 6))

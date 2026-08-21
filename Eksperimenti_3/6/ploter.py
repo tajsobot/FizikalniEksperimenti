@@ -15,7 +15,7 @@ mask = x >= cutoff
 x = x[mask] - cutoff
 y = y[mask]
 
-y = y / np.max(np.abs(y))
+
 
 def f(t, omega, decay):
     return np.cos(omega*t) * np.exp(-decay*t)
