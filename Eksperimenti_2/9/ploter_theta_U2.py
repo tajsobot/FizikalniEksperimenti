@@ -39,13 +39,13 @@ plt.rcParams.update({
     'grid.alpha': 0.3,
 })
 
-data = pd.read_excel("meritve/data.ods", sheet_name="1", engine="odf")
+data = pd.read_excel("meritve/data.ods", sheet_name="3", engine="odf")
 print(data)
 
-x = data.iloc[:,0].to_numpy()
-y = data.iloc[:,8].to_numpy()
-x_err = data.iloc[:,1].to_numpy()
-y_err = data.iloc[:,9].to_numpy()
+x = data.iloc[:,7].to_numpy()
+y = data.iloc[:,5].to_numpy()
+x_err = data.iloc[:,8].to_numpy()
+y_err = data.iloc[:,6].to_numpy()
 
 def lin_fit(x, k, n):
     return k * x + n
@@ -96,9 +96,9 @@ ax.plot(
     )
 )
 
-ax.set_xlabel(r"$r \,[A]$")
-ax.set_ylabel(r"$B \,[T]$")
+ax.set_xlabel(r"$U^2 \,[V^2]$")
+ax.set_ylabel(r"$theta \,[rad]$")
 plt.legend()
 
-plt.savefig("graf_thera_r.png", dpi=600)
+plt.savefig("graf_thera_U2.png", dpi=600)
 plt.show()
