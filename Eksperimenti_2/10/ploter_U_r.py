@@ -44,7 +44,7 @@ print(data)
 
 x = data.iloc[:,2].to_numpy()
 y = data.iloc[:,0].to_numpy()/0.4
-x_err = data.iloc[:,3].to_numpy()
+x_err = data.iloc[:,3].to_numpy()/4
 y_err = data.iloc[:,4].to_numpy()/0.4
 
 def lin_fit(x, k, n):
